@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание занятий</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Расписание занятий</h1>
+<form id="addClassForm">
+    <select id="subjectDay">
+        <option value="Понедельник">Понедельник</option>
+        <option value="Вторник">Вторник</option>
+        <option value="Среда">Среда</option>
+        <option value="Четверг">Четверг</option>
+        <option value="Пятница">Пятница</option>
+    </select>
+    <input type="text" id="subjectName" list="subjectList" placeholder="Название занятия" required>
+    <datalist id="subjectList"></datalist>
+    <input type="time" id="subjectTime" required value="08:00">
+    <button type="submit" id="addBtn">Добавить</button>
+    <button type="button" id="clearSchedule">Очистить</button>
+</form>
+    <hr>
+ <div class="filter-section">
+        <label for="filterDay">Показать день:</label>
+        <select id="filterDay">
+            <option value="Все">Все дни</option>
+            <option value="Понедельник">Понедельник</option>
+            <option value="Вторник">Вторник</option>
+            <option value="Среда">Среда</option>
+            <option value="Четверг">Четверг</option>
+            <option value="Пятница">Пятница</option>
+        </select>
+    </div>
+
+        <table border="1" id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Предмет</th>
+                    <th>Время</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+</body>
+</html>
